@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login : Smart gate</title>
+    <link rel="icon" type="icon/.JPG" href="imgs/wallpaperflare.com_wallpaper (1).jpg">
+    <meta name="description"
+        content="if you want to make login and sign up for esay way use our login page you will fell good ">
+    <meta name="keywords" content="log,in,sign,up">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index_Style.css">
+</head>
+
+<body>
+    <!-- login-signup section -->
+    <section class="login-sec" id="login-sec">
+        <div class="row justify-content-center container-fluid">
+            <div class="col-md-8">
+                <div class="content-sec mt-5 p-5 text-center">
+                    <header class="p-1">
+                        <h1>Smart Login System</h1>
+                    </header>
+                    <form class="p-1">
+                        <input type="text" name="nameInput" placeholder="Enter Your Name..." id="nameInput"
+                            class="form-control mt-3">
+                        <div class="alert alert-danger mt-3 d-none" id="alert1" role="alert">
+                            <strong class="text-danger bg-transparent">Start with Capital Letter !!</strong>
+                        </div>
+
+                        <input type="email" name="emailInput" placeholder="Enter Your Email..." id="emailInput"
+                            class="form-control mt-3">
+                        <div class="alert alert-danger mt-3 d-none" id="alert2" role="alert">
+                            <strong class="text-danger bg-transparent">Ex :ex@example.com</strong>
+                        </div>
+                        <input type="password" name="passwordInput" placeholder="Enter Your Password..."
+                            id="passwordInput" class="form-control mt-3">
+                        <div class="alert alert-danger mt-3 d-none" id="alert3" role="alert">
+                            <strong class="text-danger bg-transparent">Must Enter Letter => 6 Letters !!</strong>
+                        </div>
+                        <button class="btn btn-transperent w-100 fw-bolder fs-5  mt-4" id="LogSignBtn">Sign Up</button>
+
+                    </form>
+                    <div class="sec-foot">
+                        <p class="text-bg-dark w-50 m-auto fs-5 mt-3">Don’t have an account? <a href="#" id="anchLogSig">Sign in</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- user section -->
+    <section class="welcome-sec d-none" id="welcome-sec">
+        <nav class="navbar pt-4">
+            <div class="container">
+                <div class="row w-100 justify-content-between">
+                    <div class="col-md-3">
+                        <div class="nav-brand">
+                            <h2 class="text-light fs-3">SMART LOGIN</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="nav-brand">
+                            <button class="btn btn-transperent fw-bolder" id="logoutBTn">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <article>
+            <div class="content position-absolute top-50 start-50 translate-middle p-5">
+                <h2 class="p-4 text-bg-light">Welcome <span class="text-bg-success p-2 ms-2 fs-4" id="noureen"></span></h2>
+            </div>
+        </article>
+    </section>
+    <!-- alert section -->
+    <section class="alert-sec text-center bg-transparent d-none" id="alert-sec">
+        <div class="alert alert-danger alert-dismissible fade show w-50 m-auto p-5" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <strong class="text-danger bg-transparent">Try Again !!</strong>
+        </div>
+        <script>
+            var alertList = document.querySelectorAll(".alert");
+            alertList.forEach(function (alert) {
+                new bootstrap.Alert(alert);
+            });
+        </script>
+    </section>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
